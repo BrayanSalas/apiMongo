@@ -1,0 +1,1 @@
+const Lyrics = require('../models/lyrics.model')
