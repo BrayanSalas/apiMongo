@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded())
 app.use(morgan('dev'))
 
 // Routes
-app.set('/Lyrics', lyrics)
+app.use('/Lyrics', lyrics)
 
 // PORT and Start app
 app.set('port', process.env.PORT || 3000)

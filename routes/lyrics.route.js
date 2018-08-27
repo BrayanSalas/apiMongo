@@ -1,8 +1,9 @@
 import routerInit from 'express-promise-router'
-import { index } from '../controllers/lyrics.controller'
+import { index, newLyrics, deleteLyrics } from '../controllers/lyrics.controller'
 const router = routerInit()
 
 router.get('/', index)
 router.post('/', newLyrics)
+router.delete('/:id', deleteLyrics)
 
 module.exports = router
