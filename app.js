@@ -4,13 +4,12 @@ import bodyParser from 'body-parser'
 import morgan from 'morgan'
 import lyrics from './routes/lyrics.route'
 
-
 const app = express()
 app.set('json spaces', 4)
 
 // Mongo Connection
 mongoose.connect('mongodb://localhost:27017/Lyrics', {useNewUrlParser: true})
-    .then(res => {
+    .then(() => {
         console.log('The app has been connected to MongoDB')
     }).catch(err => {
         throw new Error(err)
