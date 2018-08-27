@@ -6,6 +6,7 @@ import lyrics from './routes/lyrics.route'
 
 
 const app = express()
+app.set('json spaces', 4)
 
 // Mongo Connection
 mongoose.connect('mongodb://localhost:27017/Lyrics', {useNewUrlParser: true})
